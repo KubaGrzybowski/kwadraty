@@ -1,0 +1,97 @@
+
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Latające kwadraty</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #080818;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.square {
+    position: absolute;
+    bottom: -100px;
+    width: 40px;
+    height: 40px;
+    border: 2px solid;
+    animation: fly 10s linear infinite;
+    opacity: 0;
+}
+
+.square:nth-child(1) {
+    left: 10%;
+    border-color: #00ffff;
+    animation-delay: 0s;
+}
+
+.square:nth-child(2) {
+    left: 30%;
+    width: 70px;
+    height: 70px;
+    border-color: #ff00ff;
+    animation-delay: 2s;
+}
+
+.square:nth-child(3) {
+    left: 50%;
+    border-color: #00ff88;
+    animation-delay: 4s;
+}
+
+.square:nth-child(4) {
+    left: 70%;
+    width: 60px;
+    height: 60px;
+    border-color: #ffff00;
+    animation-delay: 1s;
+}
+
+.square:nth-child(5) {
+    left: 90%;
+    border-color: #ff4444;
+    animation-delay: 3s;
+}
+
+@keyframes fly {
+    0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 0;
+    }
+
+    10% {
+        opacity: 1;
+    }
+
+    90% {
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(-120vh) rotate(720deg);
+        opacity: 0;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="square"></div>
+<div class="square"></div>
+<div class="square"></div>
+<div class="square"></div>
+<div class="square"></div>
+
+</body>
+</html>
